@@ -6,21 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>扩展原生 File 对象 | Hexo</title>
+  <title>Archives: 2022 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="扩展原生 File 对象应用场景      index.html 1&lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;input&quot;&gt;  index.js 12345678910111213let filedom &#x3D; document.querySelector(&amp;#x27;#input&amp;#x27;)filedom.addEventListener(&amp;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="扩展原生 File 对象">
-<meta property="og:url" content="http://example.com/2023/04/24/fileSelf/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/archives/2022/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="扩展原生 File 对象应用场景      index.html 1&lt;input type&#x3D;&quot;file&quot; id&#x3D;&quot;input&quot;&gt;  index.js 12345678910111213let filedom &#x3D; document.querySelector(&amp;#x27;#input&amp;#x27;)filedom.addEventListener(&amp;">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2023/04/24/images/fileSelf.png">
-<meta property="article:published_time" content="2023-04-24T05:11:15.142Z">
-<meta property="article:modified_time" content="2023-04-24T05:11:15.142Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/04/24/images/fileSelf.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -49,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/avatar.jpeg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -89,7 +83,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/avatar.jpeg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -126,175 +120,211 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-fileSelf" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      扩展原生 File 对象
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/12/24/Buffer/" class="archive-article-date">
+  	<time datetime="2022-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/12/24/Buffer/">Node.js Buffer(缓冲区)</a>
     </h1>
   
 
-        
-        <a href="/2023/04/24/fileSelf/" class="archive-article-date">
-  	<time datetime="2023-04-24T05:11:15.142Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="扩展原生-File-对象"><a href="#扩展原生-File-对象" class="headerlink" title="扩展原生 File 对象"></a>扩展原生 File 对象</h3><h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><div align="center">
-  <img src="../images/fileSelf.png" height=250/>
-</div>
+        <div class="article-info info-on-right">
+          
+          
 
-<p>index.html</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;file&quot; id=&quot;input&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>index.js</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">let filedom = document.querySelector(&#x27;#input&#x27;)</span><br><span class="line">filedom.addEventListener(&#x27;change&#x27;,(event)=&gt;&#123;</span><br><span class="line">  let target =  event.target</span><br><span class="line">  let file = new FileSelf(target.files[0])</span><br><span class="line">  file.predictFile()//文件预览</span><br><span class="line">  let urlObj = file.toUrl() //生成对象url</span><br><span class="line">  let div = document.createElement(&#x27;div&#x27;)</span><br><span class="line">  div.innerHTML = urlObj.url</span><br><span class="line">  document.body.insertBefore(div,filedom)</span><br><span class="line">  setTimeout( ()=&gt;&#123;</span><br><span class="line">    urlObj.destory() //销毁对象url资源</span><br><span class="line">  &#125; ,8000)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h4 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">class FileSelf &#123;</span><br><span class="line">  constructor(file)&#123;</span><br><span class="line">    let  &#123; name,size,type &#125; = file</span><br><span class="line">    this.file = file</span><br><span class="line">    this.name = name</span><br><span class="line">    this.size = size</span><br><span class="line">    this.type = type</span><br><span class="line">  &#125;</span><br><span class="line">  // 文件大小校验</span><br><span class="line">  isOverSize(size)&#123;</span><br><span class="line">    size = size.toLocaleLowerCase()</span><br><span class="line">    let num = parseInt(size)</span><br><span class="line">    let flag = size.split(num)[1] || &#x27;kb&#x27;</span><br><span class="line">    if( this.size &lt; Math.pow(1024,flag === &#x27;kb&#x27; ? 1 : 2) ) &#123;</span><br><span class="line">    return false</span><br><span class="line">    &#125;</span><br><span class="line">    return true</span><br><span class="line">  &#125;</span><br><span class="line">  // 文件类型校验</span><br><span class="line">  isValide( type )&#123;</span><br><span class="line">    type = typeof type === &#x27;string&#x27; ? type.split(&#x27;,&#x27;) : []</span><br><span class="line">    if( type.includes(this.type) ) &#123;</span><br><span class="line">    return true</span><br><span class="line">    &#125;</span><br><span class="line">    return false</span><br><span class="line">  &#125;</span><br><span class="line">  // 文件发送至服务器</span><br><span class="line">  post()&#123;</span><br><span class="line">    let formData = new FormData()</span><br><span class="line">    formData.append(&#x27;file&#x27;,this.file)</span><br><span class="line">    ajax.post(url,formData)</span><br><span class="line">  &#125;</span><br><span class="line">  // 读取文件内容</span><br><span class="line">  readFile()&#123;</span><br><span class="line">    return new Promise((resolve,reject)=&gt;&#123;</span><br><span class="line">      let fileReader = new FileReader()</span><br><span class="line">      fileReader.readAsBinaryString(this.file)</span><br><span class="line">      fileReader.onload = (event)=&gt;&#123;</span><br><span class="line">      let result = event.target.result</span><br><span class="line">      resolve(result)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"> &#125;</span><br><span class="line">//  预览文件</span><br><span class="line"> predictFile()&#123;</span><br><span class="line">    let result = this.readFile()</span><br><span class="line">    result.then( text=&gt;&#123;</span><br><span class="line">    let element = document.createElement(&#x27;textarea&#x27;)</span><br><span class="line">    element.rows = 2</span><br><span class="line">    element.cols = 50</span><br><span class="line">    element.value = text</span><br><span class="line">    element.style.height = &#x27;100px&#x27;</span><br><span class="line">    element.style.width = &#x27;200px&#x27;</span><br><span class="line">    document.body.append(element)</span><br><span class="line">  &#125; )</span><br><span class="line">  &#125;</span><br><span class="line">  // 文件转url</span><br><span class="line">  toUrl()&#123;</span><br><span class="line">    if( this.file instanceof File) &#123;</span><br><span class="line">      let url = &#x27;&#x27;</span><br><span class="line">      return &#123;</span><br><span class="line">      url: URL.createObjectURL(this.file),</span><br><span class="line">      destory: ()=&gt;&#123;</span><br><span class="line">        URL.revokeObjectURL.apply(null,url)</span><br><span class="line">      &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/04/24/fileSelf/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2023/04/24/Buffer/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Node.js Buffer(缓冲区)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2023/04/24/eventEmitter/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Node.js EventEmitter</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/12/24/fileSelf/" class="archive-article-date">
+  	<time datetime="2022-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-24</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/12/24/fileSelf/">扩展原生 File 对象</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/12/24/eventEmitter/" class="archive-article-date">
+  	<time datetime="2022-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/12/24/eventEmitter/">Node.js EventEmitter</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/12/24/hightAuto/" class="archive-article-date">
+  	<time datetime="2022-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/12/24/hightAuto/">高度自适应</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/12/24/echars/" class="archive-article-date">
+  	<time datetime="2022-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/12/24/echars/">封装 echarsManage</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/12/24/multipleSelect/" class="archive-article-date">
+  	<time datetime="2022-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/12/24/multipleSelect/">带有&#34;不限&#34;的下拉多选(1)</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/12/24/multipleSelect2/" class="archive-article-date">
+  	<time datetime="2022-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/12/24/multipleSelect2/">带有&#34;不限&#34;的下拉多选(2)</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -317,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
