@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Node.js EventEmitter | Hexo</title>
+  <title>英语单词 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node.js EventEmitter一.定义EventEmitter：events 模块的对象，核心功能是事件的触发和监听器的注册。  二.属性方法 EventEmitter() 构造函数 addListener(event,listener) 添加事件监听器 on(event,listener) 注册监听器 once(event,listener) 注册单次事件监听器，监听器触发后就移除 r">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Node.js EventEmitter">
-<meta property="og:url" content="http://example.com/2022/12/24/eventEmitter/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="英语单词">
+<meta property="og:url" content="http://example.com/2022/12/24/English/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Node.js EventEmitter一.定义EventEmitter：events 模块的对象，核心功能是事件的触发和监听器的注册。  二.属性方法 EventEmitter() 构造函数 addListener(event,listener) 添加事件监听器 on(event,listener) 注册监听器 once(event,listener) 注册单次事件监听器，监听器触发后就移除 r">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2022/12/24/images/culture.png">
 <meta property="article:published_time" content="2022-12-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-04-24T05:29:15.834Z">
+<meta property="article:modified_time" content="2024-11-13T11:52:14.657Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/12/24/images/culture.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -124,19 +124,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-eventEmitter" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-English" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Node.js EventEmitter
+      英语单词
     </h1>
   
 
         
-        <a href="/2022/12/24/eventEmitter/" class="archive-article-date">
+        <a href="/2022/12/24/English/" class="archive-article-date">
   	<time datetime="2022-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-12-24</time>
 </a>
         
@@ -144,31 +144,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Node-js-EventEmitter"><a href="#Node-js-EventEmitter" class="headerlink" title="Node.js EventEmitter"></a>Node.js EventEmitter</h2><h4 id="一-定义"><a href="#一-定义" class="headerlink" title="一.定义"></a>一.定义</h4><p>EventEmitter：events 模块的对象，核心功能是事件的触发和监听器的注册。</p>
-<hr>
-<h4 id="二-属性"><a href="#二-属性" class="headerlink" title="二.属性"></a>二.属性</h4><h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a><u><em>方法</em></u></h5><ol>
-<li>EventEmitter() 构造函数</li>
-<li>addListener(event,listener) 添加事件监听器</li>
-<li>on(event,listener) 注册监听器</li>
-<li>once(event,listener) 注册单次事件监听器，监听器触发后就移除</li>
-<li>removeListener(event,listener) 移除指定事件的监听器</li>
-<li>removeAllListeners([event]) 移除所有事件的监听器，如果指定事件，移除指定事件的所有监听器</li>
-<li>listeners(event) 查询事件监听器</li>
-<li>emit(event,args) 触发事件</li>
-</ol>
-<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a><u><em>事件</em></u></h5><ol>
-<li>newListener(event,listener) 添加监听器的时候触发</li>
-<li>removeListener(event,listener) 移除监听器的时候触发</li>
-</ol>
-<h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a><u><em>继承</em></u></h5><p>对象继承包括: fs,net,http</p>
-<hr>
-<h4 id="三-应用"><a href="#三-应用" class="headerlink" title="三.应用"></a>三.应用</h4><p>eg1:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var EventEmitter = require(&#x27;events&#x27;).EventEmitter;</span><br><span class="line">var event = new EventEmitter()</span><br><span class="line">let callback =  function() &#123;</span><br><span class="line">  console.log(&#x27;event 事件触发&#x27;)</span><br><span class="line">&#125;</span><br><span class="line">event.on(&#x27;event&#x27;,callback)</span><br><span class="line">conslo.log(event.listenerCount(&#x27;event&#x27;)+&#x27;个监听器&#x27;)</span><br><span class="line">event.emit(&#x27;event&#x27;)</span><br><span class="line">eventEmitter.removeListener(&#x27;event&#x27;, callback);</span><br><span class="line">conslo.log(event.listenerCount(&#x27;event&#x27;)+&#x27;个监听器&#x27;)</span><br></pre></td></tr></table></figure>
-
-<p>执行结果：</p>
-<blockquote>
-<p>event 事件触发<br>1 个监听器<br>0 个监听器</p>
-</blockquote>
+        <div align="center">
+    <img src="../images/culture.png" width="100%"/>
+</div>
 
       
 
@@ -248,7 +226,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/12/24/eventEmitter/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/12/24/English/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -262,18 +240,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2022/12/24/fileSelf/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/12/24/multipleSelect2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          扩展原生 File 对象
+          带有&#34;不限&#34;的下拉多选(2)
         
       </div>
     </a>
   
   
-    <a href="/2022/12/24/hightAuto/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">高度自适应</div>
+    <a href="/2020/12/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <i class="icon-circle-right"></i>
     </a>
   
